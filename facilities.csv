@@ -1,0 +1,14 @@
+company,facility_name,city,province,country,gid_0,lat,lon,revenue_weight,bws_score,bws_label,drr_score,drr_label,aqueduct_source,tsmc_self_rated_risk,source_url
+TSMC,Hsinchu Science Park,Hsinchu,Hsinchu,Taiwan,TWN,24.7881,120.9970,0.30,,,,, TSMC ESG 2024 (self-rated),Mid-to-low,https://esg.tsmc.com/file/public/e-APractitionerofGreenPower_2.pdf
+TSMC,Taichung Fab,Taichung,Taichung,Taiwan,TWN,24.1477,120.6736,0.15,,,,,TSMC ESG 2024 (self-rated),Mid-to-low,https://esg.tsmc.com/file/public/e-APractitionerofGreenPower_2.pdf
+TSMC,Southern Taiwan Science Park (Tainan),Tainan,Tainan,Taiwan,TWN,22.9999,120.2270,0.35,,,,,TSMC ESG 2024 (self-rated),Mid-to-low,https://esg.tsmc.com/file/public/e-APractitionerofGreenPower_2.pdf
+TSMC,Fab 21 (Phoenix),Phoenix,Arizona,United States,USA,33.4484,-112.0740,0.08,4.42,Extremely High (>80%),1.35,Low-Medium,Aqueduct 4.0 Ind weight,High,https://esg.tsmc.com/file/public/e-APractitionerofGreenPower_2.pdf
+TSMC,JASM (Kumamoto),Kumamoto,Kumamoto,Japan,JPN,32.8031,130.7079,0.05,0.97,Low (<10%),1.81,Low-Medium,Aqueduct 4.0 Ind weight,Mid-to-low,https://esg.tsmc.com/file/public/e-APractitionerofGreenPower_2.pdf
+TSMC,Fab Dresden (in construction),Dresden,Sachsen,Germany,DEU,51.0504,13.7373,0.02,2.39,Medium-High (20-40%),2.96,Medium,Aqueduct 4.0 Ind weight,,https://www.tsmc.com/english/news-events/blog/blog_20230808
+ASML,Veldhoven HQ + Manufacturing,Veldhoven,Noord-Brabant,Netherlands,NLD,51.4082,5.3999,0.70,2.96,Medium-High (20-40%),2.54,Medium,Aqueduct 4.0 Ind weight,,https://www.asml.com/en/company/about-asml/locations
+ASML,Linkou Factory,Taoyuan,Taoyuan,Taiwan,TWN,25.0330,121.3010,0.20,,,,,TSMC ESG 2024 (Taiwan proxy),,https://www.asml.com/en/company/about-asml/locations
+ASML,Tainan Factory,Tainan,Tainan,Taiwan,TWN,22.9999,120.2270,0.10,,,,,TSMC ESG 2024 (Taiwan proxy),,https://www.asml.com/en/company/about-asml/locations
+Samsung,Hwaseong Fab,Hwaseong,Gyeonggi-do,South Korea,KOR,37.2001,126.9783,0.55,2.03,Medium-High (20-40%),2.03,Medium,Aqueduct 4.0 Ind weight,,https://semiconductor.samsung.com/us/consumer-storage/internal-ssd/
+Samsung,Pyeongtaek Fab,Pyeongtaek,Gyeonggi-do,South Korea,KOR,36.9921,127.1130,0.45,2.03,Medium-High (20-40%),2.03,Medium,Aqueduct 4.0 Ind weight,,https://semiconductor.samsung.com/us/consumer-storage/internal-ssd/
+Intel,Fab 52/62 (Chandler),Chandler,Arizona,United States,USA,33.3062,-111.8413,0.60,4.42,Extremely High (>80%),1.35,Low-Medium,Aqueduct 4.0 Ind weight,,https://www.intel.com/content/www/us/en/corporate-responsibility/environment.html
+Intel,Hillsboro (D1X),Hillsboro,Oregon,United States,USA,45.5229,-122.9898,0.40,0.70,Low (<10%),1.47,Low-Medium,Aqueduct 4.0 Ind weight,,https://www.intel.com/content/www/us/en/corporate-responsibility/environment.html
