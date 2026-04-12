@@ -281,6 +281,21 @@ def run_scoring() -> tuple[pd.DataFrame, pd.DataFrame]:
     fac = pd.read_csv(INPUT_PATH)
     print(f"Loaded facilities_merged.csv: {len(fac)} rows\n")
 
+    # ── Normalize revenue weights per company ─────────────────────────────────
+    # Facilities marked "(in construction)" are excluded from normalization:
+    # they don't contribute current revenue, so active-facility weights are
+    # rescaled to sum to 1.0 among themselves. Under-construction weights
+    # are left unchanged.
+    under_construction = fac["facility_name"].str.contains(r"\(in construction\)", na=False)
+    for company in fac["company"].unique():
+        active_mask = (fac["company"] == company) & ~under_construction
+        weight_sum = fac.loc[active_mask, "revenue_weight"].sum()
+        if weight_sum > 0 and abs(weight_sum - 1.0) > 1e-9:
+            fac.loc[active_mask, "revenue_weight"] = (
+                fac.loc[active_mask, "revenue_weight"] / weight_sum
+            )
+            print(f"  Normalized {company} active weights (sum was {weight_sum:.4f} → 1.0000)")
+
     # ── Facility-level scores ─────────────────────────────────────────────────
     fac["composite_score_l1"] = fac.apply(
         lambda r: composite_score(r["bws_score"], r["rfr_score"]), axis=1

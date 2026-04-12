@@ -2,4 +2,4 @@ company,l1_score,l2_score,risk_label_l2,total_rar_m,total_rar_pct_rev,revenue_bn
 Intel,60.94,62.98,High,332.7,0.614,54.2,2,Fab 52/62 (Chandler),69.79
 ASML,40.13,42.82,Medium-High,127.1,0.461,27.6,3,Veldhoven HQ + Manufacturing,44.13
 Samsung,33.31,33.31,Medium,220.5,0.383,57.5,2,Hwaseong Fab,33.31
-TSMC,34.44,32.7,Medium,160.7,0.232,69.3,6,Fab 21 (Phoenix),69.79
+TSMC,34.43,32.7,Medium,172.4,0.249,69.3,6,Fab 21 (Phoenix),69.79
