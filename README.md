@@ -118,6 +118,16 @@ ASML's Taiwan facilities (Linkou/Taoyuan and Tainan) use the same scores as co-l
 
 ---
 
+## Score Validation
+
+Samsung's 2025 Sustainability Report (DS Division Water Risk section) independently confirms Hwaseong and Pyeongtaek as Medium-High water stress using the WRI Aqueduct 
+Water Risk Atlas. This is consistent with this model's BWS scores of 2.11 for both facilities. 
+Samsung groups the two sites together in their own risk assessment, supporting the equal revenue weighting applied here.
+
+TSMC's 2024 Sustainability Report independently confirms Taiwan fabs as mid-to-low risk and Arizona as high risk via WRI Aqueduct assessment. This is consistent with this 
+model's BWS scores of 1.5–1.8 for Taiwan and 4.75 for Arizona.
+---
+
 ## Data Sources
 
 | Source | Used For |
