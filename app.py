@@ -213,6 +213,14 @@ if selected_company != "All":
 if selected_risk != "All":
     fac_filtered = fac_filtered[fac_filtered["risk_label"] == selected_risk]
 
+# Small coordinate jitter for display only — prevents overlapping bubbles
+# for co-located facilities. Underlying data unchanged.
+import numpy as np
+rng = np.random.default_rng(42)  # fixed seed = consistent positions
+fac_filtered = fac_filtered.copy()
+fac_filtered["lat"] = fac_filtered["lat"] + rng.uniform(-0.4, 0.4, len(fac_filtered))
+fac_filtered["lon"] = fac_filtered["lon"] + rng.uniform(-0.4, 0.4, len(fac_filtered))
+
 
 # ══════════════════════════════════════════════════════════════════════════════
 # HEADER
@@ -248,7 +256,7 @@ map_fig = px.scatter_mapbox(
     lat="lat", lon="lon",
     color="risk_label",
     size="composite_score_l1",
-    size_max=28,
+    size_max=16,
     hover_name="facility_name",
     hover_data={
         "company": True,
@@ -265,11 +273,11 @@ map_fig = px.scatter_mapbox(
     zoom=0.8,
     center={"lat": 25, "lon": -10},
     labels={
+        "bws_score": "Water Stress (0–5 scale)",
+        "rfr_score": "Flood Risk (0–5 scale)",
+        "composite_score_l1": "Risk Score (Out of 100, 70% BWS + 30% RFR)",
+        "annual_rar_m": "Annual Revenue at Risk ($M)",
         "risk_label": "Risk Level",
-        "composite_score_l1": "Risk Score",
-        "bws_score": "Water Stress",
-        "rfr_score": "Flood Risk",
-        "annual_rar_m": "Annual RaR ($M)",
         "company": "Company",
     },
 )
@@ -286,7 +294,7 @@ map_fig.update_layout(
     ),
 )
 st.plotly_chart(map_fig, use_container_width=True)
-st.markdown("<p class='source-note'>Bubble size proportional to composite risk score · Hover for details</p>",
+st.markdown("<p style='font-size:0.95rem; color:#94a3b8;'>Bubble size proportional to composite risk score · Hover for details · Zoom in to distinguish co-located facilities (Taiwan, Korea, Arizona)</p>",
             unsafe_allow_html=True)
 
 
@@ -486,6 +494,8 @@ risk: a dominant node going offline causes cascading impact disproportionate to 
 L1 (linear) scores provided alongside for transparency.
 
 **Framework**: IFRS S2 Physical Risk Disclosure · WRI Aqueduct 4.0 (2023) · Company ESG Reports 2023/2024
+
+Facility coordinates include a small fixed jitter (±0.4°) for display clarity — underlying data is unaffected.
     """)
 
 st.markdown(
