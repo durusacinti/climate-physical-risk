@@ -83,6 +83,14 @@ Where:
 
 **Calibration anchor**: TSMC's Taiwan fabs score ~1.8 and experienced supply disruption during the 2021 drought, requiring water to be trucked in. This is consistent with a 5% annual disruption probability (serious drought roughly once per decade). All other thresholds scale from this anchor.
 
+### ASML: Production Risk vs Service Risk
+
+ASML's facility model differs from fab operators. All EUV and DUV systems are assembled and shipped exclusively from Veldhoven; San Diego (light sources) and Berlin (optics) manufacture components that feed into Veldhoven final assembly. 
+Taiwan locations are field service offices, not production sites.
+
+Revenue weights reflect this distinction: Veldhoven 0.94, Taiwan offices 0.03 each. 
+A Veldhoven water supply disruption stops all machine shipments globally. A Taiwan office disruption affects field service only and is modeled accordingly.
+
 ### Company-Level Scoring (L1 and L2)
 
 Two aggregation methods reported for transparency:
@@ -95,6 +103,8 @@ Two aggregation methods reported for transparency:
 ### Revenue Weights
 
 Facility revenue weights estimated from company annual reports, sustainability disclosures, and analyst consensus estimates. Intel weights sum to 0.60 (Chandler 0.35 + Hillsboro 0.25); remaining 0.40 represents Ireland, Israel, and Malaysia fabs not in scope. TSMC weights normalized programmatically to sum to 1.0 (raw sum 0.95 — 5% unattributed, likely corporate/IP revenue).
+
+TSMC 2024 Annual Report confirms 69% of wafer revenue from advanced nodes (≤7nm). Facility weights reflect estimated node seniority based on public technical disclosures; no facility-level revenue is published by any of the four companies in scope.
 
 ---
 
